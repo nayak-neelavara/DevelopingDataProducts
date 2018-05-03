@@ -15,7 +15,7 @@ dataStructure <- capture.output(str(mtcars))
 set.seed(210915) # my son's birthday :-)
 
 # Defining custom training controls with cross validation.
-customTrainControl <- trainControl(method = "cv", number = 10)
+customTrainControl <- trainControl(method = "cv", number = 11)
 
 # Building Random Forest model function. 
 # in order to regenerate the model when the user change parameters in the UI.
