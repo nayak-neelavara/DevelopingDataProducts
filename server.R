@@ -12,7 +12,7 @@ source(file = "modelBuilding.R")
 # Setting up Shiny Server
 #
 shinyServer(
-
+  
   function(input, output, session) {
     
     # To show new lines in the browser
@@ -21,7 +21,7 @@ shinyServer(
     
     # Builds "reactively" the prediction.
     predictMpg <- reactive({
-
+      
       carToPredict <- data.frame(
         cyl = input$cyl, 
         disp = input$disp, 
@@ -37,11 +37,11 @@ shinyServer(
       randomForestPredictor(carsRandomForestModelBuilder(), carToPredict)
       
     })
-  
+    
     output$prediction <- renderTable({
       predictMpg()
     })
     
   }
-
+  
 )

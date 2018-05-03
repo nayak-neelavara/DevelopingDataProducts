@@ -56,7 +56,7 @@ shinyUI(
     "MPG Prediction",
     
     theme = shinytheme("cerulean"),
-  
+    
     tabPanel(
       
       "Prediction",
@@ -100,7 +100,7 @@ shinyUI(
       mainPanel(
         
         width = 8,
-                           
+        
         h3("MPG Prediction"),
         
         br(),
@@ -115,7 +115,7 @@ shinyUI(
     
     tabPanel(
       
-      "Help",
+      "Description",
       
       p("A Random Forest prediction model is generated and trained for a specific dataset of cars (see below)."),
       
@@ -123,26 +123,26 @@ shinyUI(
       
       p("Dataset used by the application is the ",
         a(href = "https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html", "Motor Trend Car Road Tests"),
-        "The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models)."
+        "The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 11 aspects of automobile design and performance for 32 automobiles (1973-74 models)."
       ),
       
-      tags$div("Next is the dataset structure:",
-        tags$ul(
-          tags$li(strong("mpg"), "Miles/(US) gallon"),
-          tags$li(strong("cyl"), "Number of cylinders"),
-          tags$li(strong("disp"), "Displacement (cu.in.)"),
-          tags$li(strong("hp"), "Gross horsepower"),
-          tags$li(strong("drat", "Rear axle ratio"),
-          tags$li(strong("wt"), "Weight (1000 lbs)"),
-          tags$li(strong("qsec"), "1/4 mile time"),
-          tags$li(strong("vs"), "V/S (V-shape or straight engine)"),
-          tags$li(strong("am"), "Transmission (0 = automatic, 1 = manual)"),
-          tags$li(strong("gear"), "Number of forward gears"),
-          tags$li(strong("carb"), "Number of carburetor"))
-        ),
-        
-        tableOutput("dataStructure")
-        
+      tags$div("The dataset structure:",
+               tags$ul(
+                 tags$li(strong("mpg"), "Miles/(US) gallon"),
+                 tags$li(strong("cyl"), "Number of cylinders"),
+                 tags$li(strong("disp"), "Displacement (cu.in.)"),
+                 tags$li(strong("hp"), "Gross horsepower"),
+                 tags$li(strong("drat", "Rear axle ratio"),
+                         tags$li(strong("wt"), "Weight (1000 lbs)"),
+                         tags$li(strong("qsec"), "1/4 mile time"),
+                         tags$li(strong("vs"), "V/S (V-shape or straight engine)"),
+                         tags$li(strong("am"), "Transmission (0 = automatic, 1 = manual)"),
+                         tags$li(strong("gear"), "Number of forward gears"),
+                         tags$li(strong("carb"), "Number of carburetor"))
+               ),
+               
+               tableOutput("dataStructure")
+               
       )
       
     ),
@@ -150,27 +150,26 @@ shinyUI(
     tabPanel(
       
       "About",
-             
+      
       h3("Developing Data Products course - Assignment Week 4 - Shiny Application and Reproducible Pitch"),
       
-      h3("Author: Gaston Dario Napoli - March, 2017"),
+      h3("Author: nayak-neelavara - May 03, 2018"),
       
       br(),
       
       p("This application shows an example of making a web application using R and ",
         a(href = "https://shiny.rstudio.com/", "Shiny library"),
-        "together, corresponding to the assigment of the week 4,",
+        "together, for to the assigment of the week 4,",
         a(href = "https://www.coursera.org/learn/data-products", "Developing Data Products course from Coursera")
       ),
       
       p("Source code of this application is available at",
-        a(href = "https://github.com/laplata2003/data-products-week-4-project",
-          "https://github.com/laplata2003/data-products-week-4-project")
+        a(href = "https://github.com/nayak-neelavara/DevelopingDataProducts")
       )
       
     )
-
-
+    
+    
   )
-
+  
 )
